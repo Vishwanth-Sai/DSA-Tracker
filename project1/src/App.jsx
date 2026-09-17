@@ -1,13 +1,15 @@
 
 import React from 'react'
 import Navbar from './components/Navbar'
-import Sidebar from './components/sidebar'
+import Hero1 from './components/hero1'
 function App() {
   return (
     <>
-      <div className="min-h-screen bg-linear-to-br from-[#0F172A] via-[#1E293B] to-[#312E81]">
+      <div className="app">
         <Navbar />
-        <Sidebar />
+        <div className="flex">
+        <Hero1 />
+        </div>
       </div>
     </>
   )
