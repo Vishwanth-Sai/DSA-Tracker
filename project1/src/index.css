@@ -2,6 +2,7 @@
 :root {
   --bg-primary: #0f172a;
   --bg-secondary: #1e293b;
+  --bg-grad: #312e81;
   --bg-card: #0f172a;
   --text-primary: #f8fafc;
   --text-secondary: #cbd5e1;
@@ -11,6 +12,7 @@
 .light {
   --bg-primary: #f8fafc;
   --bg-secondary: #e2e8f0;
+  --bg-grad: #9794e0;
   --bg-card: #ffffff;
   --text-primary: #0f172a;
   --text-secondary: #475569;
@@ -27,21 +29,31 @@ body {
     to bottom right,
     var(--bg-primary),
     var(--bg-secondary),
-    #312e81
+    var(--bg-grad)
+
   );
 }
 .navbar {
   height: 4rem;
   width: 100%;
   color: var(--text-secondary);
-  background: var(--bg-card);
-  border-bottom: 1px solid var(--border);
-  backdrop-filter: blur(12px);
+
+  background: color-mix(in srgb, var(--bg-card) 70%, transparent);
+
+  border: 1px solid var(--border);
+
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   padding: 0 1rem;
+
   transition: 0.3s;
+
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
 }
 .search {
   border-radius: 1rem;

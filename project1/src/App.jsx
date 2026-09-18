@@ -1,13 +1,13 @@
 
 import React from 'react'
 import Navbar from './components/Navbar'
-import Hero1 from './components/hero1'
+import Hero1 from './components/Hero1'
 function App() {
   return (
     <>
       <div className="app">
         <Navbar />
-        <div className="flex">
+        <div>
         <Hero1 />
         </div>
       </div>
